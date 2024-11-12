@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question - AskKulikov</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.875em;
+        }
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <a class="navbar-brand" href="./index.html"><h2>AskKulikov</h2></a>
+                <div class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="button" onclick="window.location.href='./ask.html'">Ask</button>
+                </div>
+                <div class="d-flex gap-3">
+                    <img src="asda.jpg" alt="Avatar" class="img-thumbnail">
+                    <div>
+                        <div>
+                            Dr. Pepper
+                        </div>
+                        <div class="d-flex gap-3">
+                            <a href="./settings.html">settings</a>
+                            <a href="#">log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-3">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title">Question Title</h2>
+                        <p class="card-text">This is the detailed description of the question. It provides all the necessary information and context for the question.</p>
+                        <div class="mb-3">
+                            <span class="badge bg-primary badge-custom">perl</span>
+                            <span class="badge bg-danger badge-custom">python</span>
+                            <span class="badge bg-secondary badge-custom">TechnoPark</span>
+                            <span class="badge bg-danger badge-custom">MySQL</span>
+                            <span class="badge bg-success badge-custom">django</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Answers</h3>
+                <div class="d-flex flex-column gap-3">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border mb-2" style="height: 100px">
+                                        <img src="jpg.jpg" alt="Avatar" class="img-fluid">
+                                    </div>
+                                    <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title">Answer title</h5>
+                                    <p class="card-text">This is the content of the answer. It provides a detailed response to the question.</p>
+                                    <div class="d-flex gap-5">
+                                        <a href="#" class="card-link">Comment (3)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border mb-2" style="height: 100px">
+                                        <img src="jpg.jpg" alt="Avatar" class="img-fluid">
+                                    </div>
+                                    <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title">Answer title</h5>
+                                    <p class="card-text">This is the content of the answer. It provides a detailed response to the question.</p>
+                                    <div class="d-flex gap-5">
+                                        <a href="#" class="card-link">Comment (3)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="border mb-2" style="height: 100px">
+                                        <img src="jpg.jpg" alt="Avatar" class="img-fluid">
+                                    </div>
+                                    <input class="form-control" type="number" value="5" placeholder="Default input" aria-label="default input example">
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title">Answer title</h5>
+                                    <p class="card-text">This is the content of the answer. It provides a detailed response to the question.</p>
+                                    <div class="d-flex gap-5">
+                                        <a href="#" class="card-link">Comment (3)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation example" class="mt-3">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <h3>Your Answer</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="answerBody">Answer Body</label>
+                        <textarea class="form-control" id="answerBody" name="answerBody" rows="5" maxlength="1000" required></textarea>
+                        <small class="form-text text-muted">Provide a detailed answer to the question (max 1000 characters).</small>
+                        <div class="error-message">Please enter a valid answer.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-3">Submit Answer</button>
+                </form>
+            </div>
+
+            <div class="col-lg-3">
+                <section class="mb-3">
+                    <h2>Popular Tags</h2>
+                    <div>
+                        <span class="badge bg-primary badge-custom">perl</span>
+                        <span class="badge bg-danger badge-custom">python</span>
+                        <span class="badge bg-secondary badge-custom">TechnoPark</span>
+                        <span class="badge bg-danger badge-custom">MySQL</span>
+                        <span class="badge bg-success badge-custom">django</span>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Best Members</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a href="#">Mr. Freeman</a></li>
+                        <li class="list-group-item"><a href="#">Dr. House</a></li>
+                        <li class="list-group-item"><a href="#">Bender</a></li>
+                        <li class="list-group-item"><a href="#">Queen Victoria</a></li>
+                        <li class="list-group-item"><a href="#">V. Pupkin</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
