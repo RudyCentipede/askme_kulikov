@@ -1,107 +1,34 @@
-<!doctype html>
-<html lang="en">
+{% extends 'layouts/base.html' %}
+{% load static %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ask a Question</title>
-    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
-    <style>
-        .error-message {
-            color: red;
-            font-size: 0.875em;
-        }
-        .form-group {
-            margin-bottom: 1.5em;
-        }
-    </style>
-</head>
+{% block content %}
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <div class="d-flex w-100 justify-content-between align-items-center">
-                <a class="navbar-brand" href="./index.html"><h2>AskKulikov</h2></a>
-
-                <div class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="button" onclick="window.location.href='./ask.html'">Ask</button>
-                </div>
-
-                <div class="d-flex gap-3">
-                    <img src="asda.jpg" alt="Avatar" class="img-thumbnail">
-                    <div>
-                        <div>
-                            Dr. Pepper
-                        </div>
-                        <div class="d-flex gap-3">
-                            <a href="./settings.html">settings</a>
-                            <a href="./login.html">log out</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container mt-3">
-        <div class="row">
-            <div class="col-9">
+<div class="col-9">
                 <h1>Ask a Question</h1>
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="questionTitle">Question Title</label>
-                        <input type="text" class="form-control" id="questionTitle" name="questionTitle" maxlength="100" required>
-                        <small class="form-text text-muted">Enter a brief title for your question (max 100 characters).</small>
-                        <div class="error-message">Please enter a valid title.</div>
-                    </div>
+     <form action="#" method="post">
+         <div class="form-group">
+             <label for="questionTitle">Question Title</label>
+             <input type="text" class="form-control" id="questionTitle" name="questionTitle" maxlength="100" required>
+             <small class="form-text text-muted">Enter a brief title for your question (max 100 characters).</small>
+             <div class="error-message">Please enter a valid title.</div>
+         </div>
 
-                    <div class="form-group">
-                        <label for="questionBody">Question Body</label>
-                        <textarea class="form-control" id="questionBody" name="questionBody" rows="5" maxlength="1000" required></textarea>
-                        <small class="form-text text-muted">Provide detailed information about your question (max 1000 characters).</small>
-                        <div class="error-message">Please enter a valid question body.</div>
-                    </div>
+         <div class="form-group">
+             <label for="questionBody">Question Body</label>
+             <textarea class="form-control" id="questionBody" name="questionBody" rows="5" maxlength="1000" required></textarea>
+             <small class="form-text text-muted">Provide detailed information about your question (max 1000 characters).</small>
+             <div class="error-message">Please enter a valid question body.</div>
+         </div>
 
-                    <div class="form-group">
-                        <label for="tags">Tags</label>
-                        <input type="text" class="form-control" id="tags" name="tags" maxlength="50" required>
-                        <small class="form-text text-muted">Enter tags separated by commas (max 50 characters).</small>
-                        <div class="error-message">Please enter valid tags.</div>
-                    </div>
+         <div class="form-group">
+             <label for="tags">Tags</label>
+             <input type="text" class="form-control" id="tags" name="tags" maxlength="50" required>
+             <small class="form-text text-muted">Enter tags separated by commas (max 50 characters).</small>
+             <div class="error-message">Please enter valid tags.</div>
+         </div>
 
-                    <button type="submit" class="btn btn-primary">ASK!</button>
-                </form>
-            </div>
-            <div class="col">
-                <section class="mb-3">
-                    <h2>Popular Tags</h2>
-                    <div>
-                        <span class="badge bg-primary badge-custom">perl</span>
-                        <span class="badge bg-danger badge-custom">python</span>
-                        <span class="badge bg-secondary badge-custom">TechnoPark</span>
-                        <span class="badge bg-danger badge-custom">MySQL</span>
-                        <span class="badge bg-success badge-custom">django</span>
-                    </div>
-                </section>
+         <button type="submit" class="btn btn-primary">ASK!</button>
+     </form>
+ </div>
 
-                <section>
-                    <h2>Best members</h2>
-                    <div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#">Mr. Freeman</a></li>
-                            <li class="list-group-item"><a href="#">Dr. House</a></li>
-                            <li class="list-group-item"><a href="#">Bender</a></li>
-                            <li class="list-group-item"><a href="#">Queen Victoria</a></li>
-                            <li class="list-group-item"><a href="#">V. Pupkin</a></li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
-
-    <script src="../static/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock %}

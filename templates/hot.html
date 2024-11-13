@@ -1,0 +1,56 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="d-flex gap-3 align-items-center">
+                <h1>Hot Questions</h1>
+                <a href="{% url 'index' %}">New Questions</a>
+            </div>
+            <div class="col-9 d-flex flex-column gap-3">
+                {% for question in questions %}
+                    <article class="card w-100" style="width: 18rem;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="img-container mb-2" style="height: 100px">
+                                        <img src="../static/img/cat.jpg" alt="Avatar" class="img-fluid">
+                                    </div>
+                                    <input class="form-control" type="number" value="5" placeholder="Default input"
+                                        aria-label="default input example">
+                                </div>
+                                <div class="col-9">
+
+                                    <h5 class="card-title">
+                                        <a href="./question.html">{{ question.title }}</a>
+                                    </h5>
+                                    <p class="card-text">
+                                        {{ question.text }}
+                                    </p>
+
+                                    <div class="d-flex gap-5">
+                                        <a href="#" class="card-link">Answer (3)</a>
+                                        <div>
+
+                                            Tags:
+
+                                            <a href="#" class="card-link">Another link</a>
+                                            <a href="#" class="card-link">Another link</a>
+                                            <a href="#" class="card-link">Another link</a>
+                                            <a href="#" class="card-link">Another link</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            {% include 'layouts/pagination.html' %}
+            </div>
+
+{% endblock %}
+
+
+
+
+
